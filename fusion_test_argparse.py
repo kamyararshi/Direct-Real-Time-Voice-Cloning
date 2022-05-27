@@ -115,9 +115,11 @@ while True:
         # Get the reference audio filepath
         message = "Reference voice: enter an audio filepath of a voice to be cloned (mp3, " \
                   "wav, m4a, flac, ...):\n"
-        #in_fpath = Path(input(message).replace("\"", "").replace("\'", ""))
-        in_fpath = Path(r".\Real-Time-Voice-Cloning\datasets_root\LibriSpeech\train-clean-100\19\227\19-227-0001.flac".replace("\"", "").replace("\'", ""))
-
+        ##--------------Can Modify---------------##
+        #Address of the desired sample voice to clone
+        in_fpath = Path(r".\datasets_root\LibriSpeech\train-clean-100\19\227\19-227-0001.flac".replace("\"", "").replace("\'", ""))
+        ##--------------         ----------------##
+        
         ## Computing the embedding
         # First, we load the wav using the function that the speaker encoder provides. This is
         # important: there is preprocessing that must be applied.
